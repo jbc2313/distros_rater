@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
+
+
 <Layout title="Welcome to Astro.">
 	<main>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
@@ -11,6 +13,11 @@ import Card from '../components/Card.astro';
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
 		<ul role="list" class="link-card-grid">
+            <Card
+            href="/distros"
+            title="DISTRO TIER LIST"
+            body="Go to the Distro Rating Tier List"
+            />
 			<Card
 				href="https://docs.astro.build/"
 				title="Documentation"
