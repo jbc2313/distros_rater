@@ -3,42 +3,62 @@
 ---
 
 
-<div>
+<div id="TierMainDiv">
     <div id="S_Tier">
-        <div></div>
-        <div></div>
+        <div id="letterbox"></div>
+        <div id="distrobox"></div>
     </div>
     <div id="A_Tier">
-        <div></div>
-        <div></div>
+        <div id="letterbox"></div>
+        <div id="distrobox"></div>
     </div>
     <div id="B_Tier">
-        <div></div>
-        <div></div>
+        <div id="letterbox"></div>
+        <div id="distrobox"></div>
     </div>
     <div id="C_Tier">
-        <div></div>
-        <div></div>
+        <div id="letterbox"></div>
+        <div id="distrobox"></div>
     </div>
     <div id="D_Tier">
-        <div></div>
-        <div></div>
+        <div id="letterbox"></div>
+        <div id="distrobox"></div>
     </div>
     <div id="F_Tier">
-        <div></div>
-        <div></div>
+        <div id="letterbox"></div>
+        <div id="distrobox"></div>
     </div>
 </div>
 
 <style>
-
-    .HeaderList {
+    #TierMainDiv {
+        height: 75vh;
+        width: 60vw;
+        margin: auto;
+        border: solid black 1px;
         display: flex;
-        justify-content: space-evenly;
-        list-style: none;
-        font-size: 25px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #S_Tier, 
+    #A_Tier,
+    #B_Tier,
+    #C_Tier,
+    #D_Tier,
+    #F_Tier { 
+        display: flex;
+        width: 60vw;
+        height: 12.5vh;
+        border: solid black 1px;
+
     }
 
+    #letterbox {
+        border: solid black 1px;
+        border-right: solid black 3px;
+        width: 10vw;
+    }
 
 
 </style>
