@@ -1,31 +1,38 @@
 ---
 
+import Letter_S from '../../public/Letters/S.png'
+import Letter_A from '../../public/Letters/A.png'
+import Letter_B from '../../public/Letters/B.png'
+import Letter_C from '../../public/Letters/C.png'
+import Letter_D from '../../public/Letters/D.jpeg'
+import Letter_F from '../../public/Letters/F.png'
+
 ---
 
 
 <div id="TierMainDiv">
     <div id="S_Tier">
-        <div id="letterbox"></div>
+        <div id="letterbox"><img src={Letter_S} /></div>
         <div id="distrobox"></div>
     </div>
     <div id="A_Tier">
-        <div id="letterbox"></div>
+        <div id="letterbox"><img src={Letter_A} /></div>
         <div id="distrobox"></div>
     </div>
     <div id="B_Tier">
-        <div id="letterbox"></div>
+        <div id="letterbox"><img src={Letter_B} /></div>
         <div id="distrobox"></div>
     </div>
     <div id="C_Tier">
-        <div id="letterbox"></div>
+        <div id="letterbox"><img src={Letter_C} /></div>
         <div id="distrobox"></div>
     </div>
     <div id="D_Tier">
-        <div id="letterbox"></div>
+        <div id="letterbox"><img src={Letter_D} /></div>
         <div id="distrobox"></div>
     </div>
     <div id="F_Tier">
-        <div id="letterbox"></div>
+        <div id="letterbox"><img src={Letter_F} /></div>
         <div id="distrobox"></div>
     </div>
 </div>
@@ -38,7 +45,12 @@
         border: solid black 1px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        { /* justify-content: space-between; */ }
+    }
+
+    #letterbox img {
+        height: 100%;
+        object-fit: contain;
     }
     
     #S_Tier, 
@@ -62,3 +74,7 @@
 
 
 </style>
+
+
+
+{/* https://thumb7.shutterstock.com/thumb_large/2199470/2189364501/stock-vector-crossbones-with-side-view-skull-illustration-on-white-background-2189364501.jpg */}
