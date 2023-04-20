@@ -9,8 +9,16 @@ import TierList from "../components/TierList.astro";
         <h1 id="Greet">Lets rate all the distros we know on a tier list!</h1>
     </div>
     <div><TierList/></div>
+    <div id="ButtonDiv">
+        <button id="RateButton">Rate Distro</button>
+    </div>
+    <dialog id="pageDialogue">
+        <div>
+            <p>THIS IS A DIALOG</p> 
+        </div>
+    </dialog>
 </html>
-
+<script src="../scripts/RateButton.ts"></script>
 
 <style>
    
@@ -20,6 +28,18 @@ import TierList from "../components/TierList.astro";
 
     #Greet {
         text-align: center;
+    }
+
+    #RateButton {
+        height: 40px;
+        width: 80px;
+        margin: auto;
+    }
+
+    #ButtonDiv {
+        display: flex;
+        margin: 40px;
+        justify-content: center;
     }
 
 
