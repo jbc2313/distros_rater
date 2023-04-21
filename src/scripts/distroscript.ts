@@ -19,12 +19,12 @@ dialogSubmit?.addEventListener('click', (event)=>{
     event.preventDefault();
     distroChosen = document.getElementById("DistroInput");
     if(distroChosen instanceof HTMLInputElement) 
-    console.log(distroChosen.value);
+    console.log(`Distro Chosen: ${distroChosen.value}`);
     //place user chosen info in the table here
 
     distroRank = document.getElementById("DistroRank");
     if(distroRank instanceof HTMLInputElement)
-    console.log(distroRank.value);
+    console.log(`Rank Chosen: ${distroRank.value}`);
     //place user chosen info in the table here
 
     if(pageDialogue instanceof HTMLDialogElement)
