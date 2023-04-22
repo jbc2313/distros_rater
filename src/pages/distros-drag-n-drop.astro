@@ -6,11 +6,10 @@ import TierList from "../components/TierList.astro";
 <html>
     <div><Header/></div>
     <div>
-        <h1 id="Greet">Lets rate all the distros we know on a tier list!</h1>
+        <h1 id="Greet">Lets rate all the distros we know on a tier list with Drag N Drop!</h1>
     </div>
     <div><TierList/></div>
-    <div id="ButtonDiv">
-        <button id="RateButton">Rate Distro</button>
+    <div id="GifList">
     </div>
 </html>
 
@@ -23,17 +22,13 @@ import TierList from "../components/TierList.astro";
     #Greet {
         text-align: center;
     }
-
-    #RateButton {
-        height: 40px;
-        width: 80px;
+    
+    #GifList {
+        border: solid black 3px;
+        height: 12.5vh;
+        width: 60vw;
         margin: auto;
-    }
-
-    #ButtonDiv {
-        display: flex;
-        margin: 40px;
-        justify-content: center;
+        margin-top: 40px;
     }
 
 
