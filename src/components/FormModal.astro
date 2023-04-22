@@ -1,0 +1,37 @@
+---
+
+---
+
+
+<dialog id="pageDialogue">
+    <div>
+        <form>
+        <div>
+            <input id="DistroInput" list="distros" name="distro"/>
+            <datalist id="distros">
+                <option value="Debian"/>
+                <option value="Ubuntu" />
+                <option value="Kubuntu" />
+                <option value="Fedora" />
+                <option value="Arch" />
+                <option value="Gentoo" />
+                <option value="Mint" />
+                <option value="Elementary" />
+            </datalist>
+            <input id="DistroRank" list="ranks" name="rank" />
+            <datalist id="ranks">
+                <option value="S" />
+                <option value="A" />
+                <option value="B" />
+                <option value="C" />
+                <option value="D" />
+                <option value="F" /> 
+            </datalist>
+        </div>
+        <div>
+            <button id="dialogSubmit" type="submit">Submit</button>
+            <button formmethod="dialog" id="closeDialog">Close</button>
+        </div>
+        <form/>
+    </div>
+</dialog>

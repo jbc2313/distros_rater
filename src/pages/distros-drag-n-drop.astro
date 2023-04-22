@@ -1,0 +1,40 @@
+---
+import Header from "../components/Header.astro";
+import TierList from "../components/TierList.astro";
+---
+
+<html>
+    <div><Header/></div>
+    <div>
+        <h1 id="Greet">Lets rate all the distros we know on a tier list!</h1>
+    </div>
+    <div><TierList/></div>
+    <div id="ButtonDiv">
+        <button id="RateButton">Rate Distro</button>
+    </div>
+</html>
+
+<style>
+   
+   html, body {
+        margin: 0; 
+   }
+
+    #Greet {
+        text-align: center;
+    }
+
+    #RateButton {
+        height: 40px;
+        width: 80px;
+        margin: auto;
+    }
+
+    #ButtonDiv {
+        display: flex;
+        margin: 40px;
+        justify-content: center;
+    }
+
+
+</style>
