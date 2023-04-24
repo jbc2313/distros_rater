@@ -14,7 +14,7 @@ import gentoologo from '../../public/DistroImgs/gentoo.png'
     <div>
         <h1 id="Greet">Lets rate all the distros we know on a tier list with Drag N Drop!</h1>
     </div>
-    <div><TierList/></div>
+    <div><TierList ondrop={drop} /></div>
     <div id="GifList">
         <img id="arch-logo" src={archlogo} alt="arch" draggable="true" />
         <img id="debian-logo" src={debianlogo} alt="arch" draggable="true"/>
@@ -24,7 +24,10 @@ import gentoologo from '../../public/DistroImgs/gentoo.png'
     </div>
 </html>
 
+<script src="../scripts/distroscriptDragNDrop.ts"></script>
+
 <style>
+
    
    html, body {
         margin: 0; 

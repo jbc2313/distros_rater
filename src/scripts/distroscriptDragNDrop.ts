@@ -11,3 +11,14 @@ function dragstarter(e: Event) {
 };
 
 
+function drop(e: Event) {
+    if(e instanceof DragEvent) {
+        if(e.dataTransfer) {
+            //const data = e.dataTransfer.getData("text/plain");    
+            e.preventDefault();
+        }
+    }
+
+}
+
+
