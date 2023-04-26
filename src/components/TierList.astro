@@ -55,7 +55,7 @@ import Letter_F from '../../public/Letters/F.png'
                 const data = e.dataTransfer.getData("text");
                 console.log(`DROP DATA = ${data}`);
                 if(e.target instanceof HTMLDivElement)
-                e.target.appendChild(document.getElementById(data));
+                e.target.appendChild(document.getElementById(data) as Node);
                 console.log(e.target);
             }
         }
