@@ -1,3 +1,9 @@
+
+function allowdrop(e: Event) {
+    if(e instanceof DragEvent)
+        e.preventDefault();
+}
+
 function dragstarter(e: Event) {
     if(e instanceof DragEvent) {
         if(e.target instanceof HTMLElement) {
@@ -12,10 +18,14 @@ function dragstarter(e: Event) {
 
 
 function drop(e: Event) {
+    console.log("DROP EVENT");
     if(e instanceof DragEvent) {
         if(e.dataTransfer) {
-            //const data = e.dataTransfer.getData("text/plain");    
             e.preventDefault();
+            const data = e.dataTransfer.getData("text/plain");
+            console.log(`DROP DATA = ${data}`);
+            //if(e.target instanceof HTMLElement)
+            //e.target.appendChild(document.getElementById(data));
         }
     }
 

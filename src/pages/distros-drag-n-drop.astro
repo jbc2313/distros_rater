@@ -10,21 +10,51 @@ import gentoologo from '../../public/DistroImgs/gentoo.png'
 ---
 
 <html>
-    <div><Header/></div>
+    <div><Header></div>
     <div>
         <h1 id="Greet">Lets rate all the distros we know on a tier list with Drag N Drop!</h1>
     </div>
-    <div><TierList ondrop={drop} /></div>
+    <div><TierList/></div>
     <div id="GifList">
-        <img id="arch-logo" src={archlogo} alt="arch" draggable="true" />
-        <img id="debian-logo" src={debianlogo} alt="arch" draggable="true"/>
-        <img id="element-logo" src={elementarylogo} alt="elementary" draggable="true"/>
-        <img id="fedora-logo" src={fedoralogo} alt="fedora" draggable="true" />
-        <img id="gentoo-logo" src={gentoologo} alt="gentoo" draggable="true"/>
+        <img id="arch-logo" height="100" src={archlogo} alt="arch" draggable="true" />
+        <img id="debian-logo" height="100" src={debianlogo} alt="arch" draggable="true"
+        <img id="element-logo" height="100" src={elementarylogo} alt="elementary" draggable="true"/>
+        <img id="fedora-logo" height="100" src={fedoralogo} alt="fedora" draggable="true" />
+        <img id="gentoo-logo" height="100" src={gentoologo} alt="gentoo" draggable="true"/>
     </div>
+
 </html>
 
-<script src="../scripts/distroscriptDragNDrop.ts"></script>
+
+<script>
+
+    const archlogo = document.getElementById("arch-logo");
+    const debianlogo = document.getElementById("debian-logo");
+    const elementlogo = document.getElementById("element-logo");
+    const fedoralogo = document.getElementById("fedora-logo");
+    const gentoologo = document.getElementById("gentoo-logo");
+
+    function dragstarter(e: Event) {
+        if(e instanceof DragEvent) {
+            if(e.target instanceof HTMLImageElement) {
+                if(e.dataTransfer != null) {
+                    e.dataTransfer.setData("text", e.target.id);
+                    //e.dataTransfer.effectAllowed = "move";
+                    //e.dataTransfer.dropEffect = "move";
+                }
+            }
+        }
+    };
+
+    archlogo?.addEventListener('dragstart', (e)=>dragstarter(e));
+    debianlogo?.addEventListener('dragstart', (e)=>dragstarter(e));
+    elementlogo?.addEventListener('dragstart', (e)=>dragstarter(e));
+    fedoralogo?.addEventListener('dragstart', (e)=>dragstarter(e));
+    gentoologo?.addEventListener('dragstart', (e)=>dragstarter(e));
+
+</script>
+
+
 
 <style>
 

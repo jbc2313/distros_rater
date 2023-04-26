@@ -6,31 +6,84 @@ import Letter_B from '../../public/Letters/B.png'
 import Letter_C from '../../public/Letters/C.png'
 import Letter_F from '../../public/Letters/F.png'
 
+
 ---
+
+
+
+
+
 
 
 <div id="TierMainDiv">
     <div id="S_Tier">
         <div id="letterbox"><img src={Letter_S} /></div>
-        <div id="distrobox"></div>
+        <div id='sbox'></div>
     </div>
     <div id="A_Tier">
         <div id="letterbox"><img src={Letter_A} /></div>
-        <div id="distrobox"></div>
+        <div id="abox"></div>
     </div>
     <div id="B_Tier">
         <div id="letterbox"><img src={Letter_B} /></div>
-        <div id="distrobox"></div>
+        <div id='bbox'></div>
     </div>
     <div id="C_Tier">
         <div id="letterbox"><img src={Letter_C} /></div>
-        <div id="distrobox"></div>
+        <div id='cbox'></div>
     </div>
     <div id="F_Tier">
         <div id="letterbox"><img src={Letter_F} /></div>
-        <div id="distrobox"></div>
+        <div id='fbox'></div>
     </div>
+
+
+
+<script>
+    
+    const sbox = document.getElementById("sbox");
+    const abox = document.getElementById("abox");
+    const bbox = document.getElementById("bbox");
+    const cbox = document.getElementById("cbox");
+    const fbox = document.getElementById("fbox");
+
+    function drop(e: Event) {
+        console.log("DROP EVENT");
+        if(e instanceof DragEvent) {
+            if(e.dataTransfer) {
+                e.preventDefault();
+                const data = e.dataTransfer.getData("text");
+                console.log(`DROP DATA = ${data}`);
+                if(e.target instanceof HTMLDivElement)
+                e.target.appendChild(document.getElementById(data));
+                console.log(e.target);
+            }
+        }
+    }
+
+    function allowdrop(e: Event) {
+        if(e instanceof DragEvent)
+            e.preventDefault();
+    }
+
+
+    sbox?.addEventListener('drop', (e)=>drop(e))
+    sbox?.addEventListener('dragover', (e)=>allowdrop(e))
+    abox?.addEventListener('drop', drop)
+    abox?.addEventListener('dragover', allowdrop)
+    bbox?.addEventListener('drop', drop)
+    bbox?.addEventListener('dragover', allowdrop)
+    cbox?.addEventListener('drop', drop)
+    cbox?.addEventListener('dragover', allowdrop)
+    fbox?.addEventListener('drop', drop)
+    fbox?.addEventListener('dragover', allowdrop)
+</script>
+
 </div>
+
+
+
+
 
 <style>
     #TierMainDiv {
@@ -59,6 +112,16 @@ import Letter_F from '../../public/Letters/F.png'
         border: solid black 1px;
 
     }
+
+    #sbox,
+    #abox,
+    #bbox,
+    #cbox,
+    #fbox {
+        width: 50vw;
+        height: 12.5vh;
+    }
+
 
     #letterbox {
         border: solid black 1px;
