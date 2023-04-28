@@ -1,5 +1,20 @@
 # Astro Starter Kit: Basics
 
+
+
+## Starter Website to test out Astro.
+
+## Built a Linux Distro Tier List.
+
+
+
+
+
+
+
+
+
+
 ```
 npm create astro@latest -- --template basics
 ```
