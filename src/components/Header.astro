@@ -5,9 +5,9 @@
 
 <div class="Header">
     <ul class="HeaderList">
-        <li><a href="/">Home</a></li>
-        <li><a href="/distros-drag-n-drop">Distro List DRAG N DROP</a></li>
-        <li><a href="/distros-form">Distro List FORM</a></li>
+        <li><a class='link' href="/">Home</a></li>
+        <li><a class='link' href="/distros-drag-n-drop">Distro List DRAG N DROP</a></li>
+        <li><a class='link' href="/distros-form">Distro List FORM</a></li>
     </ul>
 </div>
 
@@ -34,7 +34,14 @@
         margin: 0;
     }
 
+    .link {
+        text-decoration: none;
+        color: black;
+    }
 
+    .link:hover {
+        color: white;
+    }
 
 
 </style>
