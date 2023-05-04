@@ -2,6 +2,13 @@
 const pageDialogue = document.getElementById("pageDialogue");
 const closeDialog = document.getElementById("closeDialog");
 const dialogSubmit = document.getElementById("dialogSubmit");
+
+const sbox = document.getElementById("sbox");
+const abox = document.getElementById("abox");
+const bbox = document.getElementById("bbox");
+const cbox = document.getElementById("cbox");
+const fbox = document.getElementById("fbox");
+
 let distroChosen;
 let distroRank;
 
