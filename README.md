@@ -7,7 +7,7 @@
 ## Built a Linux Distro Tier List.
 
 - Two pages, A drag n drop style page and a form based list.
-
+- Website is using no framework just normal TypeScript and Astro pages.
 
 
 
